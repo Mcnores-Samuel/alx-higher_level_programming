@@ -13,4 +13,3 @@ def fizzbuzz():
 
         if n != 100:
             print(" ", end="")
-    print()
