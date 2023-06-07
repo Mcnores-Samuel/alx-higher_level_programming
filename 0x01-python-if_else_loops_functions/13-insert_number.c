@@ -6,12 +6,10 @@
  * @number: a number to assigh as value in the new node
  * Return: pointer to the location of the new node or NULL if fail
  */
+
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new_node, *tmp_node, *current = *head;
-
-	if (current == NULL)
-		return (add_nodeint_end(&current, number));
 
 	new_node = (listint_t *)malloc(sizeof(listint_t));
 
@@ -19,16 +17,24 @@ listint_t *insert_node(listint_t **head, int number)
 		return (NULL);
 
 	new_node->n = number;
+	new_node->next = NULL;
 
-	while (current != NULL)
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+
+	if ((*head)->n > number)
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
+
+	while (current->next != NULL)
 	{
 		tmp_node = current->next;
-		if (current->n > number)
-		{
-			new_node->next = current;
-			return (new_node);
-		}
-
 		if (current->n <= number && tmp_node->n > number)
 		{
 			current->next = new_node;
@@ -38,5 +44,6 @@ listint_t *insert_node(listint_t **head, int number)
 		current = current->next;
 	}
 
-	return (NULL);
+	current->next = new_node;
+	return (new_node);
 }
