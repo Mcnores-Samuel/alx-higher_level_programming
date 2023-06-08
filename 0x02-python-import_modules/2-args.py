@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main_":
-    """takes command line arguments"""
+    """takes command line arguments."""
     import sys
 
     arg_arr = sys.argv
