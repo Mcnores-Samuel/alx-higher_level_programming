@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 
-if __name__ == "__main_":
-    """takes command line arguments."""
+if __name__ == "__main__":
     import sys
 
-    arg_arr = sys.argv
-    size = len(arg_arr)
+    args = list(sys.argv)
+    length = len(args) - 1
 
-    if size == 1:
-        print("{} arguments.".format(size - 1))
-    elif size == 2:
-        print("{} argument:".format(size - 1))
-        print("{}: {}".format(size - 1, arg_arr[size - 1]))
+    if length == 0:
+        print("{} arguments.".format(length))
+    elif length == 1:
+        print("{} argument:".format(length))
+        print("{}: {}".format(length, args[length]))
     else:
-        print("{} arguments:".format(size - 1))
-        for n in range(1, size):
-            print("{}: {}".format(n, arg_arr[n]))
+        print("{} arguments:".format(length))
+        for n in range(1, length + 1):
+            print("{}: {}".format(n, args[n]))
