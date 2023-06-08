@@ -1,13 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    """
-    import the following function from calculator_1 module
-    add : returns the sum of two numbers
-    sub : returns the difference of two integers
-    div : returns the division of two numbers
-    mul : returns the product or two integer.
-    """
+    """import the following function from calculator_1 module"""
     from calculator_1 import add, sub, div, mul
 
     a = 10
