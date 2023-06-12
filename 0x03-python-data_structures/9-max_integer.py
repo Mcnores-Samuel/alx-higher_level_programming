@@ -9,7 +9,7 @@ def max_integer(my_list=[]):
     Returns: the maximun integer in the list
     """
     if isinstance(my_list, list):
-        if not my_list:
+        if len(my_list) == 0:
             return None
         else:
             max_num = 0
