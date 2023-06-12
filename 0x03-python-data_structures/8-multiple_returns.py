@@ -8,7 +8,11 @@ def multiple_returns(sentence):
         sentence: a string to calculate its length and its first character.
     Returns: a tuple with the length of a string and its first character.
     """
+    char = ""
     if sentence:
-        result = [len(sentence), sentence[0]]
-        result = tuple(result)
-        return result
+        char = sentence[0]
+    else:
+        char = None
+    result = [len(sentence), char]
+    result = tuple(result)
+    return result
