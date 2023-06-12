@@ -2,10 +2,11 @@
 
 
 def print_list_integer(my_list=[]):
-    """Prints all integers of a list
+    """Prints all integers of a list.
 
     args:
-        my_list: list of integers
+        my_list: list of integers.
+    Returns: nothing.
     """
     for n in my_list:
         print("{:d}".format(n))
