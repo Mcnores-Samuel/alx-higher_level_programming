@@ -14,3 +14,5 @@ def no_c(my_string):
             if char != "c" and char != "C":
                 result_str += char
         return result_str
+    else:
+        pass
