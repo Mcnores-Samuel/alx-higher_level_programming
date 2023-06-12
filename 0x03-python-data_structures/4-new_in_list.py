@@ -11,7 +11,7 @@ def new_in_list(my_list, idx, element):
         element: item to add at position idx
     Returns: modified copy of the original list or unmodified copy.
     """
-    if isinstance(my_list, list):
+    if isinstance(my_list, list) and my_list:
         copy_list = [n for n in my_list]
 
         if idx < 0:
