@@ -18,6 +18,11 @@ def process_tuple(tuple_a=()):
                     tuple_a.append(0)
             n += 1
         tuple_a = tuple(tuple_a)
+    else:
+        if len(tuple_a) > 2:
+            tuple_a = list(tuple_a)
+            tuple_a = [tuple_a[n] for n in range(2)]
+            tuple_a = tuple(tuple_a)
     return tuple_a
 
 
