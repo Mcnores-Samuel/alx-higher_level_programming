@@ -8,11 +8,12 @@ def max_integer(my_list=[]):
         my_list: a list of integer to look for the max value
     Returns: the maximun integer in the list
     """
-    if not my_list:
-        return None
-    else:
-        max_num = 0
-        for n in my_list:
-            if n > max_num:
-                max_num = n
-        return max_num
+    if isinstance(my_list, list):
+        if not my_list:
+            return None
+        else:
+            max_num = 0
+            for n in my_list:
+                if n > max_num:
+                    max_num = n
+            return max_num
