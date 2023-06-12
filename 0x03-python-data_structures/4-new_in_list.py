@@ -13,7 +13,9 @@ def new_in_list(my_list, idx, element):
     """
     copy_list = [n for n in my_list]
 
-    if idx < 0 or idx > len(my_list):
+    if idx < 0:
+        return copy_list
+    elif idx > len(my_list):
         return copy_list
     else:
         copy_list[idx] = element
