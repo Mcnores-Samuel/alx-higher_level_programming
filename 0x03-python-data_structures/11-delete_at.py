@@ -10,6 +10,8 @@ def delete_at(my_list=[], idx=0):
     Returns: a new list without the deleted value
     """
     if isinstance(my_list, list):
+        if not my_list and idx == 0:
+            return []
         if my_list:
             if idx < 0 or idx > len(my_list) - 1:
                 return my_list
