@@ -9,7 +9,7 @@ def no_c(my_string):
     Returns: a new string without c or C characters.
     """
     if my_string == "":
-        return
+        return ""
     if my_string:
         result_str = ""
         for char in my_string:
