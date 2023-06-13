@@ -15,4 +15,4 @@ def no_c(my_string):
                 result_str += char
         return result_str
     else:
-        pass
+        return
