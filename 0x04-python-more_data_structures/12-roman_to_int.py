@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
     result_list = []
     total_sum = 0
 
-    if not roman_string or roman_string is None:
+    if not isinstance(roman_string, str) or not roman_string:
         return 0
     else:
         for i in roman_string:
