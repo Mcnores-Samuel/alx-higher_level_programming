@@ -17,7 +17,7 @@ def roman_to_int(roman_string):
     else:
         for i in roman_string:
             if i in roman_numeral:
-                result_list.append(i)
+                result_list.append(roman_numeral[i])
 
         for n in range(len(result_list)):
             try:
