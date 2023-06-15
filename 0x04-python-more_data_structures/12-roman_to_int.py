@@ -9,12 +9,22 @@ def roman_to_int(roman_string):
         "X": 10, "V": 5, "I": 1
     }
 
-    result = 0
+    result_list = []
+    total_sum = 0
 
     if not roman_string:
-        return result
+        return total_sum
     else:
         for i in roman_string:
             if i in roman_numeral:
-                result += roman_numeral[i]
-        return result
+                result_list.append(i)
+
+        for n in range(len(result_list)):
+            try:
+                if result_list[n] < result_list[n + 1]:
+                    total_sum -= result_list[n]
+                else:
+                    total_sum += result_list[n]
+            except IndexError:
+                total_sum += result_list[n]
+        return total_sum
