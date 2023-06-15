@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
     total_sum = 0
 
     if not roman_string or roman_string is None:
-        return total_sum
+        return 0
     else:
         for i in roman_string:
             if i in roman_numeral:
