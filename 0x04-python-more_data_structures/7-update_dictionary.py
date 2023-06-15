@@ -16,4 +16,6 @@ def update_dictionary(a_dictionary, key, value):
                 a_dictionary[key] = value
             else:
                 a_dictionary[key] = value
-    return a_dictionary
+        return a_dictionary
+    else:
+        return {}
