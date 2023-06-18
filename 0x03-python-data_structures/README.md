@@ -1,5 +1,4 @@
 # 0x03-python-data_structures Tasks
-
 ## 0-print_list_integer.py
 ```
 Prints all integers of a list.
@@ -10,7 +9,8 @@ Prints all integers of a list.
     
 ```
 ## 10-divisible_by_2.py
-```Finds all multiples of 2 in a list.
+```
+Finds all multiples of 2 in a list.
 
     args:
         my_list: a list to find multiples on.
@@ -18,7 +18,8 @@ Prints all integers of a list.
     
 ```
 ## 11-delete_at.py
-```Deletes the item at a specific position in a list.
+```
+Deletes the item at a specific position in a list.
 
     args:
         my_list: a list to delete a value from.
@@ -28,7 +29,8 @@ Prints all integers of a list.
 ```
 ## 12-switch.py
 ## 1-element_at.py
-```Retrieves an element from a list at index.
+```
+Retrieves an element from a list at index.
 
     args:
         my_list: a list to retrieves an item from.
@@ -37,7 +39,8 @@ Prints all integers of a list.
     
 ```
 ## 2-replace_in_list.py
-```Replaces an element of a list at a specific position.
+```
+Replaces an element of a list at a specific position.
 
     args:
         my_list: a list to modify.
@@ -48,7 +51,8 @@ Prints all integers of a list.
     
 ```
 ## 3-print_reversed_list_integer.py
-```Prints all integers of a list, in reverse order.
+```
+Prints all integers of a list, in reverse order.
 
     args:
         my_list: a list to reverse
@@ -56,7 +60,8 @@ Prints all integers of a list.
     
 ```
 ## 4-new_in_list.py
-```Replaces an element in a list at a specific position
+```
+Replaces an element in a list at a specific position
        without modifying the original list.
 
     args:
@@ -67,7 +72,8 @@ Prints all integers of a list.
     
 ```
 ## 5-no_c.py
-```Removes all characters c and C from a string.
+```
+Removes all characters c and C from a string.
 
     args:
         my_string: a string literal to removes c or C from.
@@ -75,7 +81,8 @@ Prints all integers of a list.
     
 ```
 ## 6-print_matrix_integer.py
-```Prints a matrix of integers.
+```
+Prints a matrix of integers.
 
     args:
         matrix:  a list of lists to print
@@ -83,14 +90,16 @@ Prints all integers of a list.
     
 ```
 ## 7-add_tuple.py
-```Checks if a tuple has no value or only one and one value.
+```
+Checks if a tuple has no value or only one and one value.
 
     args:
         tuple_a: a tuple to process or add a value(s).
     Returns: a new tuple of two values.
     
 ```
-```Adds 2 tuples.
+```
+Adds 2 tuples.
 
     args:
         tuple_a: first tuple to add.
@@ -99,7 +108,8 @@ Prints all integers of a list.
     
 ```
 ## 8-multiple_returns.py
-```Returns a tuple with the length of a string and its first character.
+```
+Returns a tuple with the length of a string and its first character.
 
     args:
         sentence: a string to calculate its length and its first character.
@@ -107,7 +117,8 @@ Prints all integers of a list.
     
 ```
 ## 9-max_integer.py
-```Finds the biggest integer of a list.
+```
+Finds the biggest integer of a list.
 
     args:
         my_list: a list of integer to look for the max value
