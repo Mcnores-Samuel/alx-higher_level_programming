@@ -12,13 +12,14 @@ int check_cycle(listint_t *list)
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	current_node = list;
+	current_node = list->next;
 
-	while (current_node != NULL)
+	while (current_node != NULL && current_node->next != NULL)
 	{
-		if (current_node->next == list && list != NULL)
+		if (current_node == list)
 			return (1);
-		current_node = current_node->next;
+		list = list->next;
+		current_node = current_node->next->next;
 	}
 	return (0);
 }
