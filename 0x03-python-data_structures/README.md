@@ -1,7 +1,8 @@
 # 0x03-python-data_structures Tasks
 
 ## 0-print_list_integer.py
-```Prints all integers of a list.
+```
+Prints all integers of a list.
 
     args:
         my_list: list of integers.
