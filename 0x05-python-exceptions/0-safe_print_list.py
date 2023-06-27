@@ -13,7 +13,7 @@ def safe_print_list(my_list=[], x=0):
         if my_list and isinstance(my_list, list):
             for n in range(x):
                 i += 1
-                print("{}".format(my_list[n]))
+                print("{}".format(my_list[n]), end="")
     except IndexError:
         pass
     return (i)
