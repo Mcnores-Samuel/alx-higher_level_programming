@@ -64,6 +64,7 @@ class Square:
 
         for i in range(self.__position[1]):
             print()
+            break
 
         if self.__size > 0:
             while n < self.__size:
@@ -73,3 +74,7 @@ class Square:
                 n += 1
         else:
             print()
+
+
+my_square = Square(5, (3, 2))
+my_square.my_print()
