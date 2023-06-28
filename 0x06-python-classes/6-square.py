@@ -73,27 +73,3 @@ class Square:
                 n += 1
         else:
             print()
-
-
-try:
-    my_square = Square(3, "Position")
-except Exception as e:
-    print(e)
-
-try:
-    my_square = Square(3, (1, ))
-except Exception as e:
-    print(e)
-
-try:
-    my_square = Square(3, (1, -3))
-except Exception as e:
-    print(e)
-
-try:
-    my_square = Square(3, (1, "3"))
-except Exception as e:
-    print(e)
-
-my_square = Square(3, (0, 1))
-my_square.my_print()
