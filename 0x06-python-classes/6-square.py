@@ -20,7 +20,10 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-        if not isinstance(position, tuple) and len(position) == 2:
+        if (not isinstance(position, tuple)) or len(position) != 2 or\
+                not isinstance(position[0], int) or\
+                not isinstance(position[1], int) or\
+                not all(n >= 0 for n in position):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
@@ -58,6 +61,10 @@ class Square:
     def my_print(self):
         """prints in stdout the square with the character #"""
         n = 0
+
+        if self.__position[1] > 0:
+            print()
+
         if self.__size > 0:
             while n < self.__size:
                 if self.__position[0] > 0:
@@ -66,3 +73,27 @@ class Square:
                 n += 1
         else:
             print()
+
+
+try:
+    my_square = Square(3, "Position")
+except Exception as e:
+    print(e)
+
+try:
+    my_square = Square(3, (1, ))
+except Exception as e:
+    print(e)
+
+try:
+    my_square = Square(3, (1, -3))
+except Exception as e:
+    print(e)
+
+try:
+    my_square = Square(3, (1, "3"))
+except Exception as e:
+    print(e)
+
+my_square = Square(3, (0, 1))
+my_square.my_print()
