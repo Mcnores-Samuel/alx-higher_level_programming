@@ -1,20 +1,84 @@
-"""
-Testing add_integer function from 0-add_integer module.
+=================================
+usage for 0-add_integer.py module
+=================================
 
->>> add_integer = __import__("0-add_integer").add_integer
->>> add_integer()
-Traceback (most recent call last):
-	...
-TypeError: add_integer() missing 1 required positional argument: 'a'
->>> add_integer(None)
-Traceback (most recent call last):
-	...
-TypeError: a must be an integer
+====================================================================
+Testing ``add_integer(a, b=98)`` function from 0-add_integer module.
+``add_integer(a, b=98)`` returns the sum of two integer
+====================================================================
+Importing ``add_integer`` function from 0-add_integer module
+============================================================
+::
+     >>> add_integer = __import__("0-add_integer").add_integer
 
+It can add numbers
+
+Numbers or integer
+==================
+
+::
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
 98
+>>> add_integer(98)
+196
+>>> add_integer(-10, -5)
+-15
+>>> add_integer(-98)
+0
+>>> add_integer(-10)
+88
+>>> n = 0
+>>> for a in [3, 2, 3, 4, 5, 6, 7]:
+...     value_b = [3, 6, -7, 90, -6, 8, -40]
+...     print(add_integer(a, value_b[n]))
+...	n += 1
+...
+6
+8
+-4
+94
+-1
+14
+-33
+
+It can also take floating point values
+
+Float numbers
+=============
+
+::
+>>> add_integer(1.43, 2.46)
+3
+>>> add_integer(100.76, -2.54)
+98
+>>> add_integer(98)
+196
+>>> add_integer(-10.657586, -5.868689)
+-15
+>>> add_integer(-98.76583)
+0
+>>> add_integer(-10.654647)
+88
+>>> n = 0
+>>> for a in [3.657, 2.768, 3.54, 4.63, 5.56, 6.647, 7.547]:
+...     value_b = [3.5784, 6.0, -7.54, 90.54, -6.67, 8.09, -40.0094]
+...     print(add_integer(a, value_b[n]))
+...	n += 1
+...
+6
+8
+-4
+94
+-1
+14
+-33
+
+Non Integers
+============
+
+::
 >>> add_integer(12, "29")
 Traceback (most recent call last):
   ...
@@ -23,23 +87,17 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 	...
 TypeError: a must be an integer
->>> add_integer(12.54, 53.3)
-65
+>>> add_integer("12.54", "53.65")
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
 >>> for item in [1, 2, 3, 4, "5", 6, "seven"]:
 ...     print(add_integer(item))
 ...
 Traceback (most recent call last):
   ...
 TypeError: a must be an integer
->>> for item in [1.4, 2.54, 3.54, 4, 5, 6, 7.6]:
-...     print(add_integer(item))
-...
-99
-100
-101
-102
-103
-104
-105
-
-"""
+>>> add_integer(None)
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer
