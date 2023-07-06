@@ -81,6 +81,8 @@ class Rectangle:
 
     def __str__(self):
         """Provides a String representation of the object"""
+        if self.__width == 0 or self.__height == 0:
+            return ("")
         for n in range(self.__height):
             print("#" * self.__width, end="")
             if n != self.__height - 1:
