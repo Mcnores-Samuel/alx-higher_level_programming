@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This module defines a class Rectangle and with nothing in it
+"""This module defines a class Rectangle.
 
 It provides methods for getting and setting with and height of a
 Rectangle(width=0, height=0).
