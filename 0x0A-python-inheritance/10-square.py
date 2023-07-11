@@ -15,4 +15,10 @@ class Square(Rectangle):
         """
         self.integer_validator("size", size)
         self.__size = size
-        Rectangle.__init__(self, size, size)
+        super().__init__(self.__size, self.__size)
+
+
+if __name__ == "__main__":
+    s = Square(13)
+    print(s)
+    print(s.area())
