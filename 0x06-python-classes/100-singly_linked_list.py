@@ -48,7 +48,7 @@ class Node:
         """Sets a pointer to the next node and can be
         refered to as next node."""
         if not isinstance(value, Node) and value is not None:
-            raise TypeError("next_node must be a Node object or None")
+            raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
