@@ -7,8 +7,7 @@ Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
-    """defines a Square class and defines a constractor
-    """
+    """defines a Square class and defines a constractor"""
     def __init__(self, size):
         """Initializes the Square class
         args:
