@@ -18,6 +18,10 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.__size = size
 
+    def area(self):
+        """Returns the area Square object"""
+        return (self.__size ** 2)
+
 
 if __name__ == "__main__":
     s = Square(13)
