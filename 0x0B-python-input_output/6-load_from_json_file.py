@@ -14,6 +14,6 @@ def load_from_json_file(filename):
         filename: JSON file to create an object from.
     Returns: the object created or Deserialized
     """
-    with open(filename, "r") as file:
+    with open(filename) as file:
         obj = json.load(file)
         return(obj)
