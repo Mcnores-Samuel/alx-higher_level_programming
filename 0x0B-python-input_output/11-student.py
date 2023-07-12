@@ -30,9 +30,6 @@ class Student:
             json: a dictionary
         """
         for key, value in json.items():
-            if key == "first_name":
-                self.first_name = value
-            elif key == "last_name":
-                self.last_name = value
-            else:
-                self.age = value
+            self.first_name = value
+            self.last_name = value
+            self.age = value
