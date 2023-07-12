@@ -30,4 +30,9 @@ class Student:
             json: a dictionary
         """
         for key, value in json.items():
-            setattr(self, key, value)
+            if key == "first_name":
+                self.first_name = value
+            elif key == "last_name":
+                self.last_name = value
+            else:
+                self.age = value
