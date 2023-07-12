@@ -2,7 +2,7 @@
 
 """This module defines a function load_from_json_file(filename)
 
-load_from_json_file(filename) creates an Object from a “JSON file”
+load_from_json_file(filename) creates an Object from a JSON file
 """
 import json
 
