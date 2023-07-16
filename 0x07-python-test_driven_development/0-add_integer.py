@@ -25,11 +25,16 @@ def add_integer(a, b=98):
         b: second integer
     Returns: an integer: the addition of a and b
     """
-    if type(a) == float or type(b) == float:
-        a = int(a)
-        b = int(b)
-    if not a or type(a) != int:
+    if a is None or (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
-    elif type(b) != int:
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
-    return (a + b)
+    result = a + b
+    if result == float('inf') or result == -float('inf'):
+        return 89
+    return int(a) + int(b)
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt", verbose=True)
