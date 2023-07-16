@@ -25,11 +25,11 @@ def add_integer(a, b=98):
         b: second integer
     Returns: an integer: the addition of a and b
     """
-    if isinstance(a, float) or isinstance(b, float):
+    if type(a) == float or type(b) == float:
         a = int(a)
         b = int(b)
-    if not a or not isinstance(a, int):
+    if not a or type(a) != int:
         raise TypeError("a must be an integer")
-    elif not isinstance(b, int):
+    elif type(b) != int:
         raise TypeError("b must be an integer")
     return (a + b)
