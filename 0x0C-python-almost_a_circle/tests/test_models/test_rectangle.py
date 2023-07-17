@@ -112,9 +112,29 @@ class Test_width_initialization_and_validation(unittest.TestCase):
 
 class Test_heigth_initialization_and_validation(unittest.TestCase):
     """Tests type validation of the height of the rectangle object"""
-    def test_heigth_type_validation(self):
+    def test_heigth_type_validation1(self):
         with self.assertRaises(TypeError):
             Rectangle(1, "12")
+
+    def test_heigth_type_validation2(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1, None)
+
+    def test_heigth_type_validation3(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1, {1, 2, 3})
+
+    def test_heigth_type_validation4(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1, [1, 2, 3])
+
+    def test_heigth_type_validation5(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12.3)
+
+    def test_heigth_type_validation6(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1, int("123esr"))
 
 
 class Test_rectangle_area_mothod(unittest.TestCase):
