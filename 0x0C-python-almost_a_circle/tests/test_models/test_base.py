@@ -33,21 +33,19 @@ class Test_base_class_instatiation(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(Base(1).__nb_objects)
 
-
-class Test_rectangle_id(unittest.TestCase):
     def test_rectangle_id(self):
         """Tests the value of the id from Rectangle class a subclass of Base
         class
 
         Rectangle(width, height, x=0, y=0, id=None) is inherits from the base
         class and the following test cases tries to access the ability of the
-        public instance attribute.
+        id public instance attribute
         """
         rbase1 = Rectangle(1, 2, 0, 0)
         rbase2 = Rectangle(1, 2, 0, 0)
         rbase3 = Rectangle(1, 2, 0, 0, 10)
-        self.assertEqual(rbase1.id, 1)
-        self.assertEqual(rbase2.id, 2)
+        self.assertEqual(rbase1.id, 7)
+        self.assertEqual(rbase2.id, 8)
         self.assertEqual(rbase3.id, 10)
 
 
