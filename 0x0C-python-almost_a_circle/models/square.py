@@ -3,7 +3,7 @@
 """This module define a Square class which inherits from
 Rectangle class, a subclass of Base class.
 """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

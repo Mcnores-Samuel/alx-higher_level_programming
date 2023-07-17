@@ -3,7 +3,7 @@
 """This module define a Base subclass (Rectangle) which
 inherits from Base class
 """
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -94,6 +94,10 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        """Returns the area of the Rectangle object"""
+        return (self.__width * self.__heigth)
 
     def display(self):
         """print the Rectangle object using character #"""
