@@ -35,21 +35,6 @@ class Test_rectangle_module_instatiation(unittest.TestCase):
         expects = [id for id in range(test_list[0], test_list[-1] + 1)]
         self.assertEqual(test_list, expects)
 
-    def test_y_type_validation(self):
-        """Tests type validation of the y value of the rectangle object"""
-        with self.assertRaises(TypeError):
-            Rectangle(1, 12, {})
-
-    def test_x_value_validation(self):
-        """Tests value validation of the x value of the rectangle object"""
-        with self.assertRaises(ValueError):
-            Rectangle(1, 1, -10)
-
-    def test_y_value_validation(self):
-        """Tests value validation of the y value of the rectangle object"""
-        with self.assertRaises(ValueError):
-            Rectangle(1, 12, -1)
-
 
 class Test_width_initialization_and_validation(unittest.TestCase):
     """Tests width value validation during initialisation"""
@@ -144,10 +129,105 @@ class Test_heigth_initialization_and_validation(unittest.TestCase):
 
 
 class Test_x_initialization_and_validation(unittest.TestCase):
-    def test_x_type_validation(self):
+    def test_x_type_validation1(self):
         """Tests type validation of the x value of the rectangle object"""
         with self.assertRaises(TypeError):
-            Rectangle(1, 1, [])
+            Rectangle(1, 1, None)
+
+    def test_x_type_validation2(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, 1.0)
+
+    def test_x_type_validation3(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, [1, 2, 3])
+
+    def test_x_type_validation4(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, (1, 2))
+
+    def test_x_type_validation5(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, {1, 2, 3})
+
+    def test_x_type_validation6(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            rect = {"x": 12}
+            Rectangle(1, 1, rect)
+
+    def test_x_type_validation7(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, "")
+
+    def test_x_value_validation(self):
+        """Tests value validation of the x value of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 1, -10)
+
+    def test_x_value_validation1(self):
+        """Tests value validation of the x value of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 1, -1)
+
+    def test_x_value_validation2(self):
+        """Tests value validation of the x value of the rectangle object"""
+        with self.assertRaises(ValueError):
+            x = 10 - 15
+            Rectangle(1, 1, x)
+
+
+class Test_y_initialization_and_validation(unittest.TestCase):
+
+    def test_y_type_validation1(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, {})
+
+    def test_y_type_validation2(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, "20")
+
+    def test_y_type_validation3(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, 91.9)
+
+    def test_y_type_validation4(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, None)
+
+    def test_y_type_validation5(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, {1, 2, 3})
+
+    def test_y_type_validation6(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, ())
+
+    def test_y_type_validation7(self):
+        """Tests type validation of the y value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 12, y={"y": 12})
+
+    def test_y_value_validation(self):
+        """Tests value validation of the y value of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 12, -1)
+
+    def test_y_value_validation1(self):
+        """Tests value validation of the y value of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 12, y=1 - 12)
 
 
 class Test_rectangle_area_mothod(unittest.TestCase):
