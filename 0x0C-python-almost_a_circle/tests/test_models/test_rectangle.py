@@ -35,20 +35,10 @@ class Test_rectangle_module_instatiation(unittest.TestCase):
         expects = [id for id in range(test_list[0], test_list[-1] + 1)]
         self.assertEqual(test_list, expects)
 
-    def test_x_type_validation(self):
-        """Tests type validation of the x value of the rectangle object"""
-        with self.assertRaises(TypeError):
-            Rectangle(1, 1, [])
-
     def test_y_type_validation(self):
         """Tests type validation of the y value of the rectangle object"""
         with self.assertRaises(TypeError):
             Rectangle(1, 12, {})
-
-    def test_heigth_value_validation(self):
-        """Tests value validation of the height of the rectangle object"""
-        with self.assertRaises(ValueError):
-            Rectangle(1, -15)
 
     def test_x_value_validation(self):
         """Tests value validation of the x value of the rectangle object"""
@@ -66,7 +56,7 @@ class Test_width_initialization_and_validation(unittest.TestCase):
     def test_width_type_validation1(self):
         """Tests type validation of the width of the rectangle object"""
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(True, 12)
+            Rectangle(None, 12)
 
     def test_width_type_validation2(self):
         """Tests type validation of the width of the rectangle object"""
@@ -134,7 +124,30 @@ class Test_heigth_initialization_and_validation(unittest.TestCase):
 
     def test_heigth_type_validation6(self):
         with self.assertRaises(TypeError):
-            Rectangle(1, int("123esr"))
+            rect = {"height": 14}
+            Rectangle(1, rect)
+
+    def test_heigth_value_validation(self):
+        """Tests value validation of the height of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, -15)
+
+    def test_heigth_value_validation1(self):
+        """Tests value validation of the height of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, -1)
+
+    def test_heigth_value_validation2(self):
+        """Tests value validation of the height of the rectangle object"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 0)
+
+
+class Test_x_initialization_and_validation(unittest.TestCase):
+    def test_x_type_validation(self):
+        """Tests type validation of the x value of the rectangle object"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, [])
 
 
 class Test_rectangle_area_mothod(unittest.TestCase):
