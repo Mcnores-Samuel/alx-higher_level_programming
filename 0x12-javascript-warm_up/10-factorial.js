@@ -4,7 +4,7 @@
  * @num - integer to factorize
  * @returns a factorial of a number
  */
-const factorial = (num) => {
+function factorial (num) {
   if (!num || num === 1) {
     return (1);
   } else {
