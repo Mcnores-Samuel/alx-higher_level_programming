@@ -6,7 +6,7 @@
  */
 function factorial (num) {
   if (!num || num === 1) {
-    return (1);
+    return 1;
   } else {
     return factorial(num - 1) * num;
   }
