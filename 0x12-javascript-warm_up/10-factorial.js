@@ -10,7 +10,7 @@ function factorial (num) {
   } else {
     return factorial(num - 1) * num;
   }
-};
+}
 
 const args = process.argv.slice(2);
 const num = Number(args[0]);
