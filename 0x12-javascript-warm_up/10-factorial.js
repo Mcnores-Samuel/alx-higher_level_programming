@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /**
- * factorial -  computes and prints a factorial
+ * factorial - computes and prints a factorial
  * @num - integer to factorize
  * @returns a factorial of a number
  */
