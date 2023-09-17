@@ -21,3 +21,4 @@ if __name__ == "__main__":
     session = Session()
     session.add(new_state)
     session.commit()
+    print(new_state.id)
