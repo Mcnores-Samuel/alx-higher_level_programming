@@ -3,7 +3,7 @@
 a name starting with N (upper N) from the database hbtn_0e_0_usa
 
 Usage:
-    Takes 3 arguments: mysql username, mysql password and database name
+    ./1-filter_states.py <mysql username> <mysql password> <database name>
 """
 if __name__ == "__main__":
     import MySQLdb
