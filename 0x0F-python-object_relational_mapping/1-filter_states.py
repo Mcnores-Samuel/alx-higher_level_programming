@@ -13,8 +13,6 @@ if __name__ == "__main__":
     try:
         username, password, database = tuple(args)
         db = MySQLdb.connect(
-            host='localhost',
-            port=3306,
             user=username,
             password=password,
             database=database
@@ -27,6 +25,7 @@ if __name__ == "__main__":
 
         states = db_cursor.fetchall()
         for state in states:
-            print(state)
+            if state[1][0] == 'N':
+                print(state)
     except ValueError:
         pass
