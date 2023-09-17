@@ -21,7 +21,7 @@ if __name__ == "__main__":
         )
         db_cursor = db.cursor()
         db_cursor.execute(
-            "SELECT * FROM states WHERE name = '{}'\
+            "SELECT * FROM `states` WHERE BINARY `name` = '{}'\
                   ORDER BY states.id ASC".format(state))
         states = db_cursor.fetchall()
         for s in states:
