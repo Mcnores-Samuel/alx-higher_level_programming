@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""This module define a script that  lists all states and there cities
-"""
+"""This module define a script that  lists all states and there cities"""
 if __name__ == "__main__":
     import sys
     from sqlalchemy.orm import sessionmaker
