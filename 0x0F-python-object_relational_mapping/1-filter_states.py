@@ -10,20 +10,23 @@ if __name__ == "__main__":
     import sys
 
     args = sys.argv[1:]
-    username, password, database = tuple(args)
-    db = MySQLdb.connect(
-        host='localhost',
-        port=3306,
-        user=username,
-        password=password,
-        database=database
-    )
+    try:
+        username, password, database = tuple(args)
+        db = MySQLdb.connect(
+            host='localhost',
+            port=3306,
+            user=username,
+            password=password,
+            database=database
+        )
 
-    db_cursor = db.cursor()
-    db_cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%'
-            ORDER BY states.id ASC
-    """)
+        db_cursor = db.cursor()
+        db_cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%'
+                ORDER BY states.id ASC
+        """)
 
-    states = db_cursor.fetchall()
-    for state in states:
-        print(state)
+        states = db_cursor.fetchall()
+        for state in states:
+            print(state)
+    except ValueError:
+        pass
