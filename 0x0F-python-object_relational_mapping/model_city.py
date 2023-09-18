@@ -6,7 +6,7 @@ from model_state import Base
 from sqlalchemy import String, Integer, Column, ForeignKey
 
 
-class Cities(Base):
+class City(Base):
     """Definition of the Cities class representing a cities table in the
     database
 
