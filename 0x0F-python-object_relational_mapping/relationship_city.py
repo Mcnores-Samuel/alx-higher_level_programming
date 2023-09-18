@@ -2,8 +2,10 @@
 """This module provides a class for connecting to a table
 in the database
 """
-from model_state import Base
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import String, Integer, Column, ForeignKey
+
+Base = declarative_base()
 
 
 class City(Base):
