@@ -7,8 +7,6 @@ from sqlalchemy import Integer, String, Column
 from sqlalchemy.orm import relationship
 from relationship_city import Base, City
 
-Base = declarative_base()
-
 
 class State(Base):
     """definition of state class representing a table in the database"""
@@ -17,5 +15,5 @@ class State(Base):
                 autoincrement=True)
     name = Column('name', String(128), nullable=False)
 
-    cities = relationship('Cities', backref='state',
+    cities = relationship('City', backref='state',
                           cascade='all, delete')
