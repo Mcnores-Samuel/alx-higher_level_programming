@@ -7,16 +7,17 @@ if __name__ == "__main__":
     import sys
 
     url = "http://89ec69ad7361.6aa4e383.alx-cod.online:5000/search_user"
+
     try:
         q = {"q": sys.argv[1]}
     except IndexError:
         q = {"q": ''}
     response = requests.post(url, q)
     try:
-        data = response.json()
-        if data:
-            print("[{}] {}".format(data['id'], data['name']))
+        response = response.json()
+        if response:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
         else:
             print("No result")
-    except requests.exceptions.JSONDecodeError:
+    except (requests.exceptions.JSONDecodeError, ValueError):
         print("Not a valid JSON")
