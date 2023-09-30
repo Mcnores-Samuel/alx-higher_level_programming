@@ -12,7 +12,7 @@ if __name__ == "__main__":
         q = {"q": sys.argv[1]}
     except IndexError:
         q = {"q": ''}
-    response = requests.post(url, q)
+    response = requests.post(url, data=q)
     try:
         response = response.json()
         if response:
