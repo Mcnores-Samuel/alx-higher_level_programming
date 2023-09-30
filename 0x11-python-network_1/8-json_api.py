@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = "http://89ec69ad7361.6aa4e383.alx-cod.online:5000/search_user"
+    url = "http://0.0.0.0:5000/search_user"
 
     try:
         q = {"q": sys.argv[1]}
