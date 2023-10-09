@@ -1,7 +1,7 @@
-#!/usr/python3
+#!/usr/bin/python3
 def magic_string():
-    n = 0
-    print("BestSchool" * n)
+    n += 1
+    return "BestSchool" * n
 
 
 for i in range(10):
